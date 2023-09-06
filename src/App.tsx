@@ -1,16 +1,16 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import HomePage from "@pages/HomePage";
-import Header from "@components/Header";
+
+import Layout from "@components/Layout";
 
 const App = () => {
   return (
-    <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-      </Routes>
-    </>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+      </Route>
+    </Routes>
   );
 };
 
