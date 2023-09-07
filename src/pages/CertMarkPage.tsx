@@ -1,4 +1,5 @@
 import Title from "@components/Title";
+import ViewButton from "@components/ViewButton";
 import styled from "styled-components";
 
 const list = [
@@ -46,7 +47,7 @@ const CertMarkPage = () => {
               <Contents>{item.name}</Contents>
               <Contents>{item.score}</Contents>
               <Contents>{item.passing}</Contents>
-              <Contents>{item.detail}</Contents>
+              <Contents><ViewButton /></Contents>
             </ContentContainer>
           ))}
         </StatusBoard>
@@ -70,12 +71,6 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const Line = styled.div`
-  width: 180px;
-  height: 5px;
-  margin-top: 15px;
-  background-color: #917b56;
-`;
 
 const OptionContainer = styled.div`
   display: flex;
@@ -124,5 +119,7 @@ const ContentContainer = styled.div`
   justify-content: space-around;
   margin-top: 3vh;
 `;
+
+
 
 export default CertMarkPage;
