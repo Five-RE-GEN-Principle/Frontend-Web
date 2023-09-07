@@ -11,3 +11,45 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* 폰트 추가 */
+
+/* Regular weight */
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  src: local('SpoqaHanSansNeo-Regular'), url('@assets/fonts/SpoqaHanSansNeo-Regular.woff2') format('woff2');
+  font-weight: 400; /* Regular weight */
+  font-style: normal;
+}
+
+/* Thin weight */
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  src: local('SpoqaHanSansNeo-Thin'), url('@assets/fonts/SpoqaHanSansNeo-Thin.woff2') format('woff2');
+  font-weight: 100; /* Thin weight */
+  font-style: normal;
+}
+
+/* Light weight */
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  src: local('SpoqaHanSansNeo-Light'), url('@assets/fonts/SpoqaHanSansNeo-Light.woff2') format('woff2');
+  font-weight: 300; /* Light weight */
+  font-style: normal;
+}
+
+/* Medium weight */
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  src: local('SpoqaHanSansNeo-Medium'), url('@assets/fonts/SpoqaHanSansNeo-Medium.woff2') format('woff2');
+  font-weight: 500; /* Medium weight */
+  font-style: normal;
+}
+
+/* Bold weight */
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  src: local('SpoqaHanSansNeo-Bold'), url('@assets/fonts/SpoqaHanSansNeo-Bold.woff2') format('woff2');
+  font-weight: 700; /* Bold weight */
+  font-style: normal;
+}
