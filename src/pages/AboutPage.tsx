@@ -10,7 +10,7 @@ const AboutPage = () => {
             <Line />
             <SubTitle>우리는 이런 일을 해요</SubTitle>
           </div>
-          <Logo src={require("@assets/frp_logo.png")} />
+          <Logo src={require("@assets/FRPLogo.png")} />
         </HeadContainer>
 
         <HeadTwo>

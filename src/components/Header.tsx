@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-import frp_logo from "@assets/frp_logo.png";
+import FRPLogo from "@assets/FRPLogo.png";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -16,7 +16,7 @@ const Header = () => {
         <ListItem>음식점</ListItem>
       </MainMenu>
       <Link to={"/"}>
-        <Logo src={frp_logo} />
+        <Logo src={FRPLogo} />
       </Link>
       <RightSide>
         <SubMenu>

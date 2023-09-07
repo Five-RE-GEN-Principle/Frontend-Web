@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-import clothes from "@assets/clothes.png";
+import fashionIcon from "@assets/fashionIcon.png";
+import beautyIcon from "@assets/beautyIcon.png";
+import foodIcon from "@assets/foodIcon.png";
+import restaurantIcon from "@assets/restaurantIcon.png";
+import applicationIcon from "@assets/applicationIcon.png";
 
 const HomePage = () => {
   return (
@@ -8,24 +12,24 @@ const HomePage = () => {
       <Carousel>대충 아주 머찐 랭킹 이미지</Carousel>
       <ButtonContainer>
         <MenuButton>
-          <MenuIcon src={clothes} />
+          <MenuIcon src={fashionIcon} />
           <ButtonText>Fashion</ButtonText>
         </MenuButton>
         <MenuButton>
-          <MenuIcon src={clothes} />
-          <ButtonText>Fashion</ButtonText>
+          <MenuIcon src={beautyIcon} />
+          <ButtonText>Beauty</ButtonText>
         </MenuButton>
         <MenuButton>
-          <MenuIcon src={clothes} />
-          <ButtonText>Fashion</ButtonText>
+          <MenuIcon src={foodIcon} />
+          <ButtonText>Food</ButtonText>
         </MenuButton>
         <MenuButton>
-          <MenuIcon src={clothes} />
-          <ButtonText>Fashion</ButtonText>
+          <MenuIcon src={restaurantIcon} />
+          <ButtonText>Restaurant</ButtonText>
         </MenuButton>
         <MenuButton>
-          <MenuIcon src={clothes} />
-          <ButtonText>Fashion</ButtonText>
+          <MenuIcon src={applicationIcon} />
+          <ButtonText>Application</ButtonText>
         </MenuButton>
       </ButtonContainer>
     </Container>
@@ -87,7 +91,7 @@ const MenuIcon = styled.img`
 
 const ButtonText = styled.div`
   font-weight: 100;
-  font-size: 36px;
+  font-size: 30px;
 `;
 
 export default HomePage;
