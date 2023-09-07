@@ -37,7 +37,7 @@ const AboutPage = () => {
               우리 팀에 참여하고 싶다면 아래의 연락처로 연락해주세요!
             </MainText>
             <br />
-            <MainText>Email: OOOO@gmail.com</MainText>
+            <MainText>Email: five.re.gen.principle@gmail.com</MainText>
           </div>
         </HeadTwo>
       </MainContents>
@@ -49,19 +49,19 @@ const AboutPage = () => {
 
 const Container = styled.div`
   display: flex;
+  gap: 100px;
   justify-content: center;
   align-items: center;
 
-  margin-top: 80px;
+  margin-top: 20px;
 `;
 
 const MainContents = styled.div``;
 
 const LineTwo = styled.div`
-  width: 1px;
-  height: 293px;
+  width: 5px;
+  height: 40vh;
   background-color: #917b56;
-  margin-left: 110px;
 `;
 
 const HeadTwo = styled.div`
@@ -75,9 +75,7 @@ const HeadContainer = styled.div`
 `;
 
 const Smile = styled.img`
-  /* width: 350px; */
-  height: 500px;
-  margin-left: 130px;
+  height: 60vh;
 `;
 
 const Logo = styled.img`
