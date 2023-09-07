@@ -5,6 +5,7 @@ import HomePage from "@pages/HomePage";
 import Layout from "@components/Layout";
 import AboutPage from "@pages/AboutPage";
 import CalculatorPage from "@pages/CalculatorPage";
+import CertMarkPage from "@pages/CertMarkPage";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route index element={<HomePage />} />
         <Route path="about" element={<AboutPage />} />
         <Route path="calculator" element={<CalculatorPage />} />
+        <Route path="certmark" element={<CertMarkPage />} />
       </Route>
     </Routes>
   );
