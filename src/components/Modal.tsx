@@ -3,16 +3,16 @@ import styled from "styled-components";
 interface ModalProps {
   isOpen: boolean;
   onClose?: () => void;
-  width?: number;
-  height?: number;
+  width?: string;
+  height?: string;
   children?: React.ReactNode;
 }
 
 const Modal = ({
   isOpen,
   onClose,
-  width = 100,
-  height = 100,
+  width = "100px",
+  height = "100px",
   children,
 }: ModalProps) => {
   // 클릭 이벤트가 해당 컴포넌트에만 들어가고,
@@ -50,13 +50,13 @@ const ModalOverlay = styled.div`
   background: rgba(0, 0, 0, 0.35);
 `;
 
-const ModalContent = styled.div<{ width: number; height: number }>`
+const ModalContent = styled.div<{ width: string; height: string }>`
   display: flex;
   justify-content: center;
   align-items: center;
 
-  width: ${(props) => props.width}px;
-  height: ${(props) => props.height}px;
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
 
   padding: 20px;
 
