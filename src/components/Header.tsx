@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import frp_logo from "@assets/frp_logo.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -11,12 +12,19 @@ const Header = () => {
         <ListItem>가공식품</ListItem>
         <ListItem>음식점</ListItem>
       </MainMenu>
-      <Logo src={frp_logo} />
+      <Link to={"/"}>
+        <Logo src={frp_logo} />
+      </Link>
       <RightSide>
         <SubMenu>
           <ListItem>커뮤니티</ListItem>
-          <ListItem>정보센터</ListItem>
-          <ListItem>제로웨이스트 활동</ListItem>
+          <Link to={"/about"}>
+            <ListItem>정보센터</ListItem>
+          </Link>
+
+          <Link to={"/certmark"}>
+            <ListItem>제로웨이스트 활동</ListItem>
+          </Link>
         </SubMenu>
         <LoginText>로그인/회원가입</LoginText>
       </RightSide>
@@ -31,7 +39,7 @@ const Container = styled.div`
   justify-content: space-around;
   align-items: center;
 
-  width: calc(100vw - 130px);
+  width: 90vw;
   height: 80px;
 
   margin-top: 30px;
@@ -44,19 +52,23 @@ const Container = styled.div`
 
 const MainMenu = styled.ul`
   display: flex;
-  justify-content: space-between;
-  gap: 35px;
-`;
-
-const SubMenu = styled.ul`
-  display: flex;
-  justify-content: space-between;
-  gap: 35px;
+  flex: 1;
+  justify-content: space-evenly;
+  /* gap: 35px; */
 `;
 
 const RightSide = styled.div`
   display: flex;
-  gap: 100px;
+  flex: 1;
+
+  margin: 0 50px;
+`;
+
+const SubMenu = styled.ul`
+  display: flex;
+  flex: 2;
+  justify-content: space-evenly;
+  gap: 35px;
 `;
 
 const ListItem = styled.li`
@@ -68,6 +80,11 @@ const Logo = styled.img`
 `;
 
 const LoginText = styled.div`
+  display: flex;
+  flex: 1;
+
+  justify-content: flex-end;
+
   font-size: 18px;
 `;
 
