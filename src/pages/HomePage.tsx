@@ -81,7 +81,7 @@ const MenuButton = styled.div`
   background-color: #fcfff5;
 
   border: solid 1px #ffffff;
-  border-radius: 30px;
+  border-radius: 31px;
 
   box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.35);
 `;
