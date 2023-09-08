@@ -34,9 +34,11 @@ const ShoppingBeauty = () =>{
         </Link>
           <MainCategoryLine>
           </MainCategoryLine>
+          <Link to={"/SearchRestaurant"}>
           <MainCategoryContent>
             음식점
           </MainCategoryContent>
+          </Link>
           <MainCategoryLine>
           </MainCategoryLine>
         </MainCategory>
