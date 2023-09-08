@@ -6,32 +6,45 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const [showDropdown, setShowDropdown] = useState(false); // Dropdown을 표시할지 결정하는 상태
+  const [informShowDropdown, setInformShowDropdown] = useState(false); // Dropdown을 표시할지 결정하는 상태
 
   return (
     <Container>
       <MainMenu>
-      <Link to={"/ShoppingFashion"}>
-        <ListItem>패션</ListItem>
-      </Link>
-      <Link to={"/ShoppingBeauty"}>
-        <ListItem>화장품</ListItem>
-      </Link>
-      <Link to={"/ShoppingFood"}>
-        <ListItem>가공식품</ListItem>
-      </Link>
-      <Link to={"/SearchRestaurant"}>
-        <ListItem>음식점</ListItem>
-      </Link>
+        <Link to={"/ShoppingFashion"}>
+          <ListItem>패션</ListItem>
+        </Link>
+        <Link to={"/ShoppingBeauty"}>
+          <ListItem>화장품</ListItem>
+        </Link>
+        <Link to={"/ShoppingFood"}>
+          <ListItem>가공식품</ListItem>
+        </Link>
+        <Link to={"/SearchRestaurant"}>
+          <ListItem>음식점</ListItem>
+        </Link>
       </MainMenu>
       <Link to={"/"}>
         <Logo src={FRPLogo} />
       </Link>
       <RightSide>
         <SubMenu>
-          <Link to={"/bulletinboard"}><ListItem>커뮤니티</ListItem></Link>
-          <Link to={"/about"}>
-            <ListItem>정보센터</ListItem>
+          <Link to={"/bulletinboard"}>
+            <ListItem>커뮤니티</ListItem>
           </Link>
+          <ListItem
+            onMouseEnter={() => setInformShowDropdown(true)}
+            onMouseLeave={() => setInformShowDropdown(false)}
+          >
+            {informShowDropdown && (
+              <InformDropdownMenu>
+                <Link to={"/about"}>About</Link>
+                <Link to={"/qna"}>Q&A</Link>
+                <Link to={"/notice"}>공지사항</Link>
+              </InformDropdownMenu>
+            )}
+            정보센터
+          </ListItem>
 
           <ListItem
             onMouseEnter={() => setShowDropdown(true)}
@@ -132,6 +145,26 @@ const DropdownMenu = styled.div`
   border-radius: 10px;
 
   margin-top: 120px;
+  padding: 20px 15px;
+
+  box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.35);
+
+  z-index: 1;
+`;
+
+const InformDropdownMenu = styled.div`
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  background-color: white;
+
+  border: 1px solid white;
+  border-radius: 10px;
+
+  margin-top: 145px;
   padding: 20px 15px;
 
   box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.35);
