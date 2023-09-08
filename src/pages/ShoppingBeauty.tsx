@@ -182,7 +182,7 @@ background-color: #969696;
 const SearchButton = styled.button`
   width: 100px;
   height: 40px;
-  background-color: #9b9b9b; /* You can customize the button style */
+  background-color: #9b9b9b;
   color: #fff;
   border: none;
   border-radius: 5px;
