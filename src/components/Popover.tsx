@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useCallback } from "react";
 import styled from "styled-components";
 
 interface PopoverProps {
@@ -16,16 +16,18 @@ const Popover = ({
 }: PopoverProps) => {
   const nodeRef = useRef<HTMLDivElement | null>(null);
 
-  // 클릭 시 popover 외부를 감지하기 위한 핸들러
-  const handleClickOutside = (event: MouseEvent) => {
-    if (
-      nodeRef.current &&
-      !nodeRef.current.contains(event.target as Node) &&
-      event.target !== triggerRef.current
-    ) {
-      toggleVisibility();
-    }
-  };
+  const handleClickOutside = useCallback(
+    (event: MouseEvent) => {
+      if (
+        nodeRef.current &&
+        !nodeRef.current.contains(event.target as Node) &&
+        event.target !== triggerRef.current
+      ) {
+        toggleVisibility();
+      }
+    },
+    [toggleVisibility, triggerRef, nodeRef]
+  );
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
@@ -33,7 +35,7 @@ const Popover = ({
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [toggleVisibility]);
+  }, [handleClickOutside]);
 
   return isVisible ? (
     <Container ref={nodeRef}>
