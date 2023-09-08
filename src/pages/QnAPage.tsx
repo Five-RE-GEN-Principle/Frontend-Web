@@ -1,5 +1,4 @@
 import LowRadiusButton from "@components/LowRadiusButton";
-import TextInput from "@components/TextInput";
 import Title from "@components/Title";
 import styled from "styled-components";
 
