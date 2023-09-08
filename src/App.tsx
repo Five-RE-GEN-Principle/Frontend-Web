@@ -18,6 +18,8 @@ import ShoppingFashion from "@pages/ShoppingFashion";
 import ShoppingFood from "@pages/ShoppingFood";
 import SearchRestaurant from "@pages/SearchRestaurant";
 import BulletinBoardPage from "@pages/BulletinBoardPage";
+import QnAPage from "@pages/QnAPage";
+import NoticePage from "@pages/NoticePage";
 
 
 const App = () => {
@@ -34,11 +36,14 @@ const App = () => {
           <Route path="restaurant" element={<RestaurantPage />} />
         </Route>
         <Route path="certmark" element={<CertMarkPage />} />
+        <Route path="bulletinboard" element={<BulletinBoardPage />} />
+        <Route path="qna" element={<QnAPage />} />
         <Route path ="shoppingbeauty" element={<ShoppingBeauty/>}/>
         <Route path ="shoppingfashion" element={<ShoppingFashion/>}/>
         <Route path ="shoppingfood" element={<ShoppingFood/>}/>
         <Route path ="searchrestaurant" element={<SearchRestaurant/>}/>
-        <Route path="bulletinboardpage" element={<BulletinBoardPage />} />
+        <Route path="bulletinboard" element={<BulletinBoardPage />} />
+        <Route path="notice" element={<NoticePage />} />
       </Route>
     </Routes>
   );

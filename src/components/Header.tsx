@@ -28,7 +28,7 @@ const Header = () => {
       </Link>
       <RightSide>
         <SubMenu>
-          <ListItem>커뮤니티</ListItem>
+          <Link to={"/bulletinboard"}><ListItem>커뮤니티</ListItem></Link>
           <Link to={"/about"}>
             <ListItem>정보센터</ListItem>
           </Link>

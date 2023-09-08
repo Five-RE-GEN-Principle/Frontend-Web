@@ -4,7 +4,7 @@ import styled from "styled-components";
 interface TextInputProps {
   width: string;
   height: string;
-  placeholder: string;
+  placeholder?: string;
 }
 
 const TextInput = ({
@@ -31,6 +31,7 @@ const StyledInput = styled.input<{ width: string; height: string }>`
     white-space: pre-wrap;
   }
 
+  padding-left: 15px;
   width: ${(props) => props.width};
   height: ${(props) => props.height};
 
