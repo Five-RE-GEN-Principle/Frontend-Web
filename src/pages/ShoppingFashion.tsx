@@ -1,12 +1,10 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import TextInput from "@components/TextInput";
 
 
 
-const ShoppingFashion = () =>{
-  
+const ShoppingBeauty = () =>{
+
   return (
     <Container>
       <SubBody>
@@ -67,20 +65,13 @@ const ShoppingFashion = () =>{
           <SubCategoryContent>
             가방
           </SubCategoryContent>
-          <SubCategoryContent>
-            지갑
-          </SubCategoryContent>
-          <SubCategoryContent>
-            악세서리
-          </SubCategoryContent>
         </SubCategory>
         <SubCategoryLine>
         </SubCategoryLine>
-        <TextInput 
-          width="380px"
-          height="40px"
-          placeholder=" 검색어를 입력하세요."/>          
-          <SearchButton>검색하기</SearchButton>
+          <SearchContainer>
+            <TextInput placeholder="검색어를 입력하세요."/>
+           <SearchButton>검색하기</SearchButton>
+          </SearchContainer>
           <ItemsGroup>
             <Item>#1</Item><Item>#2</Item><Item>#3</Item><Item>#4</Item><Item>#5</Item>
             <Item>#6</Item><Item>#7</Item><Item>#8</Item><Item>#9</Item><Item>#10</Item>
@@ -90,8 +81,6 @@ const ShoppingFashion = () =>{
     </Container>
   );
 };
-
-
 
 const Container = styled.div`
   display: flex;
@@ -125,16 +114,7 @@ const MainBody = styled.div`
   box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.35),
     0px -12px 16px rgba(255, 255, 255, 0.5);
 `;
-const SearchButton = styled.button`
-  width: 100px;
-  height: 40px;
-  background-color: #9b9b9b;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
-`;
+
 const MainTitle_SubBody = styled.li`
   display: flex;
   font-size: 20px;
@@ -155,7 +135,7 @@ flex-direction: row;
 width : 60vw;
 height : 60px;
 padding-top: 25px;
-flex-wrap: wrap;
+margin-bottom: 5px;
 /* background-color: #000000; */
 
 `;
@@ -198,12 +178,36 @@ background-color: #969696;
 
 `;
 
+
 const MainCategoryContent = styled.li`
   display: flex;
   font-size: 16px;
   color : #363636;
   font-weight: 500;
 
+`;
+const SearchContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const TextInput = styled.input`
+  width: 380px;
+  height: 40px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px; /* 검색 입력란과 버튼 사이 간격 조정 */
+`;
+
+const SearchButton = styled.button`
+  width: 100px;
+  height: 40px;
+  background-color: #9b9b9b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 `;
 
 const ItemsGroup= styled.li`
@@ -227,9 +231,4 @@ const Item = styled.li`
   background-color: #D9D9D9;
   color: #7b7b7b;
 `;
-
-
-
-
-
-export default ShoppingFashion;
+export default ShoppingBeauty;
