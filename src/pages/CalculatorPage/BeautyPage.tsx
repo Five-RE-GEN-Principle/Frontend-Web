@@ -38,12 +38,11 @@ const BeautyPage = () => {
             <Paragraph>
               {`첨부파일 및 상세설명에
             재사용 인프라 구축 여부 및
-            인프라 접근성에 대해
-            작성해주시기 바랍니다.`}
+            인프라 접근성에 대해 작성해주시기 바랍니다.`}
             </Paragraph>
             <TextInput
-              width="100%"
-              height="50px"
+              width="20vw"
+              height="80px"
               placeholder=" 구체적인 내용을 적어주세요."
             />
             <CheckBoxContainer>
