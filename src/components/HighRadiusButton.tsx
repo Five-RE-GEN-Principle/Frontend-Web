@@ -23,7 +23,7 @@ const Button = styled.div`
 
   background-color: #85897b;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 24px;
 
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.35),
     0px -3px 4px rgba(255, 255, 255, 0.5);

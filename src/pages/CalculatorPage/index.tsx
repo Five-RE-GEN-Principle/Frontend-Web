@@ -5,20 +5,19 @@ import styled from "styled-components";
 const Calculator = () => {
   return (
     <Container>
-      <Title>제로 웨이스트 점수 계산기</Title>
       <ContentsContainer>
         <SubTitleText>카테고리</SubTitleText>
         <ButtonContainer>
-          <Link to={"/"}>
+          <Link to={"fashion"}>
             <MainButton>패션</MainButton>
           </Link>
-          <Link to={"/"}>
+          <Link to={"beauty"}>
             <MainButton>화장품</MainButton>
           </Link>
-          <Link to={"/"}>
+          <Link to={"food"}>
             <MainButton>가공식품</MainButton>
           </Link>
-          <Link to={"/"}>
+          <Link to={"restaurant"}>
             <MainButton>음식점</MainButton>
           </Link>
         </ButtonContainer>
@@ -41,6 +40,9 @@ const ContentsContainer = styled.div`
 
   display: flex;
   flex-direction: column;
+
+  justify-self: center;
+  align-self: center;
   justify-content: center;
   align-items: center;
   gap: 40px;
