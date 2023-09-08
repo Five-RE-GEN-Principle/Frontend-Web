@@ -78,7 +78,8 @@ const ShoppingFashion = () =>{
         <TextInput 
           width="380px"
           height="40px"
-          placeholder=" 검색어를 입력하세요."/>
+          placeholder=" 검색어를 입력하세요."/>          
+          <SearchButton>검색하기</SearchButton>
           <ItemsGroup>
             <Item></Item><Item></Item><Item></Item><Item></Item><Item></Item>
             <Item></Item><Item></Item><Item></Item><Item></Item><Item></Item>
@@ -121,7 +122,16 @@ const MainBody = styled.div`
   box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.35),
     0px -12px 16px rgba(255, 255, 255, 0.5);
 `;
-
+const SearchButton = styled.button`
+  width: 100px;
+  height: 40px;
+  background-color: #9b9b9b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+`;
 const MainTitle_SubBody = styled.li`
   display: flex;
   font-size: 20px;

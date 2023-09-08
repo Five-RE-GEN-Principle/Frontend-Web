@@ -7,10 +7,28 @@ import InfoButton from "@components/InfoButton";
 import LowRadiusButton from "@components/LowRadiusButton";
 import HighRadiusButton from "@components/HighRadiusButton";
 import Modal from "@components/Modal";
+import TextInput from "@components/TextInput";
 
 const FoodPage = () => {
   const [rankSelected, setRankSelected] = useState<number | null>(null);
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [apply, setApply] = useState<boolean>(false);
+
+  // 임시 점수 계산 함수
+  const scoreCalculator = (index: number) => {
+    if (index === 0) return 100;
+    else if (index === 1) return 80;
+    else if (index === 2) return 50;
+    else return 20;
+  };
+
+  // 임시 순위 계산 함수
+  const rankCalculator = (index: number) => {
+    if (index === 0) return 1;
+    else if (index === 1) return 3;
+    else if (index === 2) return 8;
+    else return 15;
+  };
 
   return (
     <Container>
@@ -80,20 +98,61 @@ const FoodPage = () => {
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
         width={"30vw"}
-        height={"40vh"}
+        height={"60vh"}
       >
-        <ModalContentsContainer>
-          <InnerShadowBox>예상 총점 {/* 대충 점수 */} 점입니다.</InnerShadowBox>
-          <InnerShadowBox>예상 순위 {/* 대충 점수 */} 위입니다.</InnerShadowBox>
-          <ApplicationButtonContainer>
-            <Link to={"/"}>
-              <LowRadiusButton>지원하기</LowRadiusButton>
+        {apply ? (
+          <ApplyModalContentsContainer>
+            <ApplyTitle>지원하기</ApplyTitle>
+            <TitleLine />
+            <TextInput width="80%" height="30px" placeholder="기업명" />
+            <TextInput
+              width="80%"
+              height="30px"
+              placeholder="카테고리 (패션, 식품, 화장품, 음식점)"
+            />
+            <TextInput
+              width="80%"
+              height="30px"
+              placeholder="세부 카테고리 (ex. 패션이면 상의, 아우터, 등등)"
+            />
+            <TextInput
+              width="80%"
+              height="30px"
+              placeholder="제품명 (카테고리가 음식점인 경우, 대표메뉴 작성)"
+            />
+            <TextInput
+              width="80%"
+              height="30px"
+              placeholder="가격 (음식점인 경우 대표메뉴 가격) "
+            />
+            <LowRadiusButtonContainer>
+              <LowRadiusButton>첨부파일</LowRadiusButton>
+            </LowRadiusButtonContainer>
+            <p style={{ fontSize: 12 }}>
+              제품 판매 등록시 고객에게 노출될 제품 상세 정보를 첨부해주세요.
+            </p>
+            <Link to="/certmark">
+              <LowRadiusButton>제출하기</LowRadiusButton>
             </Link>
-            <Link to={"/"}>
-              <LowRadiusButton>처음으로</LowRadiusButton>
-            </Link>
-          </ApplicationButtonContainer>
-        </ModalContentsContainer>
+          </ApplyModalContentsContainer>
+        ) : (
+          <ModalContentsContainer>
+            <InnerShadowBox>
+              예상 총점 {scoreCalculator(rankSelected!)} 점입니다.
+            </InnerShadowBox>
+            <InnerShadowBox>
+              예상 순위 {rankCalculator(rankSelected!)} 위입니다.
+            </InnerShadowBox>
+            <ApplicationButtonContainer>
+              <LowRadiusButton onClick={() => setApply(true)}>
+                지원하기
+              </LowRadiusButton>
+              <Link to={"/"}>
+                <LowRadiusButton>처음으로</LowRadiusButton>
+              </Link>
+            </ApplicationButtonContainer>
+          </ModalContentsContainer>
+        )}
       </Modal>
     </Container>
   );
@@ -167,6 +226,17 @@ const ModalContentsContainer = styled.div`
   height: 100%;
 `;
 
+const ApplyModalContentsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+  height: 100%;
+`;
+
 const InnerShadowBox = styled.div`
   display: flex;
   justify-content: center;
@@ -186,6 +256,26 @@ const InnerShadowBox = styled.div`
 const ApplicationButtonContainer = styled.div`
   display: flex;
   gap: 30px;
+`;
+
+const ApplyTitle = styled.h2`
+  font-size: 24px;
+  font-weight: 500;
+`;
+
+const TitleLine = styled.div`
+  width: 80px;
+  height: 5px;
+
+  margin-bottom: 10px;
+
+  background-color: #917b56;
+`;
+
+const LowRadiusButtonContainer = styled.div`
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
 `;
 
 export default FoodPage;
