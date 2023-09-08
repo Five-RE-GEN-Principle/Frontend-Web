@@ -7,28 +7,28 @@ import LowRadiusButton from "@components/LowRadiusButton";
 
 const list = [
   {
-    name: "이승준",
-    score: "99",
+    name: "제품 A",
+    score: "132/150",
     passing: "합격",
     detail: "보기",
   },
   {
-    name: "최영찬",
-    score: "212",
+    name: "제품 B",
+    score: "149/150",
     passing: "합격",
     detail: "보기",
   },
   {
-    name: "신라면",
-    score: "20",
-    passing: "불합격",
+    name: "제품 C",
+    score: "79/150",
+    passing: "합격",
     detail: "보기",
   },
   {
-    name: "주니핫도그",
-    score: "점수 심사중",
+    name: "제품 D",
+    score: "",
     passing: "점수 심사중",
-    detail: "보기",
+    detail: "",
   },
 ];
 
