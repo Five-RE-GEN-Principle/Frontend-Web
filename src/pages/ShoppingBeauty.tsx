@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import TextInput from "@components/TextInput";
@@ -6,6 +6,7 @@ import TextInput from "@components/TextInput";
 
 
 const ShoppingBeauty = () =>{
+
   return (
     <Container>
       <SubBody>
@@ -66,10 +67,13 @@ const ShoppingBeauty = () =>{
         </SubCategory>
         <SubCategoryLine>
         </SubCategoryLine>
-        <TextInput 
+        <TextInput
           width="380px"
           height="40px"
-          placeholder=" 검색어를 입력하세요."/>
+          placeholder="검색어를 입력하세요."
+
+        />
+          <SearchButton>검색하기</SearchButton>
           <ItemsGroup>
             <Item></Item><Item></Item><Item></Item><Item></Item><Item></Item>
             <Item></Item><Item></Item><Item></Item><Item></Item><Item></Item>
@@ -175,6 +179,16 @@ background-color: #969696;
 
 `;
 
+const SearchButton = styled.button`
+  width: 100px;
+  height: 40px;
+  background-color: #9b9b9b; /* You can customize the button style */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+`;
 const MainCategoryContent = styled.li`
   display: flex;
   font-size: 16px;
@@ -182,6 +196,7 @@ const MainCategoryContent = styled.li`
   font-weight: 500;
 
 `;
+
 
 const ItemsGroup= styled.li`
 display: flex;
