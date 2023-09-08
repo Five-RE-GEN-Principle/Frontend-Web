@@ -42,7 +42,13 @@ const ShoppingFood = () =>{
         </MainCategory>
       </SubBody>
       <MainBody>
-        
+        <MainInfo1>
+          내 주변 친환경 포장재 사용 음식점
+        </MainInfo1>
+        <MainInfo2>
+          내 주변에 마커로 표시된 음식점을 확인하고 이용해보세요.
+        </MainInfo2>
+        <Map></Map>
       </MainBody>
 
     </Container>
@@ -89,38 +95,28 @@ const MainTitle_SubBody = styled.li`
   font-weight: 400;
   margin-bottom:50px;
 `;
-const MainTitle_MainBody = styled.li`
-  display: flex;
-  font-size: 20px;
-  gap : 24px;
-  font-weight: 400;
-`;
-
-const SubCategory= styled.li`
-display: flex;
-flex-direction: row;
-width : 60vw;
-height : 60px;
-padding-top: 25px;
-/* background-color: #000000; */
-
-`;
-const SubCategoryLine= styled.li`
-display: flex;
-flex-direction: column;
-width : 890px;
-height : 5px;
-background-color: #969696;
-margin-bottom: 20px;
-
-`;
-
-const SubCategoryContent = styled.li`
+const MainInfo1 = styled.li`
   display: flex;
   font-size: 16px;
-  color : #363636;
+  margin-left:40px;
   font-weight: 400;
-  margin-left :50px;
+`;
+const MainInfo2= styled.li`
+  display: flex;
+  font-size: 14px;
+  margin-top:8px;
+  margin-left:40px;
+  font-weight: 400;
+  color : #363636;
+`;
+
+const Map= styled.li`
+  display: flex;
+  width : 63vw;
+  height : 68vh;
+  margin-top:15px;
+  
+  background-color : #D9D9D9;
 `;
 
 const MainCategory= styled.li`
@@ -152,21 +148,4 @@ const MainCategoryContent = styled.li`
 
 `;
 
-const ItemsGroup= styled.li`
-display: flex;
-flex-wrap : wrap;
-width : 63vw;
-height : 57vh;
-gap:16px;
-margin-top: 26px;
-background-color: #fcfcfc;
-`;
-
-const Item= styled.li`
-display: flex;
-width : 11vw;
-height : 26vh;
-gap:16px;
-background-color: #D9D9D9;
-`;
 export default ShoppingFood;

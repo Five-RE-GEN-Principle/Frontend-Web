@@ -39,10 +39,12 @@ const HomePage = () => {
             <ButtonText>Food</ButtonText>
           </MenuButton>
         </Link>
+        <Link to = {"/SearchRestaurant"}>
         <MenuButton onMouseOver={() => handleIndicatorHover(3)}>
           <MenuIcon src={restaurantIcon} />
           <ButtonText>Restaurant</ButtonText>
         </MenuButton>
+        </Link>
         <MenuButton>
           <MenuIcon src={applicationIcon} />
           <ButtonText>Application</ButtonText>

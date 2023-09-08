@@ -19,7 +19,9 @@ const Header = () => {
       <Link to={"/ShoppingFood"}>
         <ListItem>가공식품</ListItem>
       </Link>
+      <Link to={"/SearchRestaurant"}>
         <ListItem>음식점</ListItem>
+      </Link>
       </MainMenu>
       <Link to={"/"}>
         <Logo src={FRPLogo} />
