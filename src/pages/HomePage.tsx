@@ -5,7 +5,7 @@ import beautyIcon from "@assets/beautyIcon.png";
 import foodIcon from "@assets/foodIcon.png";
 import restaurantIcon from "@assets/restaurantIcon.png";
 import applicationIcon from "@assets/applicationIcon.png";
-
+import { Link } from "react-router-dom";
 const HomePage = () => {
   return (
     <Container>
@@ -13,7 +13,9 @@ const HomePage = () => {
       <ButtonContainer>
         <MenuButton>
           <MenuIcon src={fashionIcon} />
+          <Link to={"/ShoppingBeauty"}>
           <ButtonText>Fashion</ButtonText>
+          </Link>
         </MenuButton>
         <MenuButton>
           <MenuIcon src={beautyIcon} />
