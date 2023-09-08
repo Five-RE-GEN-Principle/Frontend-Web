@@ -59,7 +59,8 @@ const Header = () => {
             )}
           </ListItem>
         </SubMenu>
-        <LoginText>로그인/회원가입</LoginText>
+        <Link to={"/login"}>
+        <LoginText>로그인/회원가입</LoginText></Link>
       </RightSide>
     </Container>
   );

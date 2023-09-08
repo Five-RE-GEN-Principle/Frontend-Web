@@ -20,6 +20,7 @@ import SearchRestaurant from "@pages/SearchRestaurant";
 import BulletinBoardPage from "@pages/BulletinBoardPage";
 import QnAPage from "@pages/QnAPage";
 import NoticePage from "@pages/NoticePage";
+import LoginPage from "@pages/LoginPage";
 
 
 const App = () => {
@@ -44,6 +45,7 @@ const App = () => {
         <Route path ="searchrestaurant" element={<SearchRestaurant/>}/>
         <Route path="bulletinboard" element={<BulletinBoardPage />} />
         <Route path="notice" element={<NoticePage />} />
+        <Route path="login" element={<LoginPage />} />
       </Route>
     </Routes>
   );
