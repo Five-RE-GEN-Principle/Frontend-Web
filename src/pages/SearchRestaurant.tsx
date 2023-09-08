@@ -6,6 +6,7 @@ import TextInput from "@components/TextInput";
 
 
 const ShoppingFood = () =>{
+
   return (
     <Container>
       <SubBody>
@@ -50,7 +51,9 @@ const ShoppingFood = () =>{
         <MainInfo2>
           내 주변에 마커로 표시된 음식점을 확인하고 이용해보세요.
         </MainInfo2>
-        <Map></Map>
+        
+          <Map/>
+        
       </MainBody>
 
     </Container>
@@ -117,8 +120,6 @@ const Map= styled.li`
   width : 63vw;
   height : 68vh;
   margin-top:15px;
-  
-  background-color : #D9D9D9;
 `;
 
 const MainCategory= styled.li`
