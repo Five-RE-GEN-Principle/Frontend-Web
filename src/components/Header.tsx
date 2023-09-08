@@ -54,13 +54,13 @@ const Container = styled.div`
   width: 90vw;
   height: 80px;
 
-  margin-top: 15px;
+  /* margin-top: 15px; */
   margin-bottom: 30px;
 
   border-radius: 30px;
-
+  /* 
   box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.35),
-    0px -12px 16px rgba(255, 255, 255, 0.5);
+    0px -12px 16px rgba(255, 255, 255, 0.5); */
 `;
 
 const MainMenu = styled.ul`
