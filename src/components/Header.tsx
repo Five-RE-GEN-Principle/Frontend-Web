@@ -10,10 +10,18 @@ const Header = () => {
   return (
     <Container>
       <MainMenu>
+      <Link to={"/ShoppingFashion"}>
         <ListItem>패션</ListItem>
+      </Link>
+      <Link to={"/ShoppingBeauty"}>
         <ListItem>화장품</ListItem>
+      </Link>
+      <Link to={"/ShoppingFood"}>
         <ListItem>가공식품</ListItem>
+      </Link>
+      <Link to={"/SearchRestaurant"}>
         <ListItem>음식점</ListItem>
+      </Link>
       </MainMenu>
       <Link to={"/"}>
         <Logo src={FRPLogo} />
@@ -127,6 +135,8 @@ const DropdownMenu = styled.div`
   padding: 20px 15px;
 
   box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.35);
+
+  z-index: 1;
 `;
 
 export default Header;
