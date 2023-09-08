@@ -75,8 +75,8 @@ const ShoppingBeauty = () =>{
         />
           <SearchButton>검색하기</SearchButton>
           <ItemsGroup>
-            <Item></Item><Item></Item><Item></Item><Item></Item><Item></Item>
-            <Item></Item><Item></Item><Item></Item><Item></Item><Item></Item>
+          <Item>#1</Item><Item>#2</Item><Item>#3</Item><Item>#4</Item><Item>#5</Item>
+            <Item>#6</Item><Item>#7</Item><Item>#8</Item><Item>#9</Item><Item>#10</Item>
           </ItemsGroup>
       </MainBody>
 
@@ -208,11 +208,15 @@ margin-top: 26px;
 background-color: #fcfcfc;
 `;
 
-const Item= styled.li`
-display: flex;
-width : 11vw;
-height : 26vh;
-gap:16px;
-background-color: #D9D9D9;
+const Item = styled.li`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 11vw;
+  height: 26vh;
+  gap: 16px;
+  font-size: 30px;
+  background-color: #D9D9D9;
+  color: #7b7b7b;
 `;
 export default ShoppingBeauty;
