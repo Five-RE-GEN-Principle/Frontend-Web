@@ -10,9 +10,15 @@ const Header = () => {
   return (
     <Container>
       <MainMenu>
+      <Link to={"/ShoppingFashion"}>
         <ListItem>패션</ListItem>
+      </Link>
+      <Link to={"/ShoppingBeauty"}>
         <ListItem>화장품</ListItem>
+      </Link>
+      <Link to={"/ShoppingFood"}>
         <ListItem>가공식품</ListItem>
+      </Link>
         <ListItem>음식점</ListItem>
       </MainMenu>
       <Link to={"/"}>
