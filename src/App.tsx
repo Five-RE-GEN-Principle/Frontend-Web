@@ -13,7 +13,12 @@ import FoodPage from "@pages/CalculatorPage/FoodPage";
 import RestaurantPage from "@pages/CalculatorPage/RestaurantPage";
 
 import CertMarkPage from "@pages/CertMarkPage";
+import ShoppingBeauty from "@pages/ShoppingBeauty";
+import ShoppingFashion from "@pages/ShoppingFashion";
+import ShoppingFood from "@pages/ShoppingFood";
+import SearchRestaurant from "@pages/SearchRestaurant";
 import BulletinBoardPage from "@pages/BulletinBoardPage";
+import QnAPage from "@pages/QnAPage";
 
 
 const App = () => {
@@ -30,6 +35,12 @@ const App = () => {
           <Route path="restaurant" element={<RestaurantPage />} />
         </Route>
         <Route path="certmark" element={<CertMarkPage />} />
+        <Route path="bulletinboard" element={<BulletinBoardPage />} />
+        <Route path="qna" element={<QnAPage />} />
+        <Route path ="shoppingbeauty" element={<ShoppingBeauty/>}/>
+        <Route path ="shoppingfashion" element={<ShoppingFashion/>}/>
+        <Route path ="shoppingfood" element={<ShoppingFood/>}/>
+        <Route path ="searchrestaurant" element={<SearchRestaurant/>}/>
         <Route path="bulletinboardpage" element={<BulletinBoardPage />} />
       </Route>
     </Routes>

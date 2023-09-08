@@ -10,17 +10,25 @@ const Header = () => {
   return (
     <Container>
       <MainMenu>
+      <Link to={"/ShoppingFashion"}>
         <ListItem>패션</ListItem>
+      </Link>
+      <Link to={"/ShoppingBeauty"}>
         <ListItem>화장품</ListItem>
+      </Link>
+      <Link to={"/ShoppingFood"}>
         <ListItem>가공식품</ListItem>
+      </Link>
+      <Link to={"/SearchRestaurant"}>
         <ListItem>음식점</ListItem>
+      </Link>
       </MainMenu>
       <Link to={"/"}>
         <Logo src={FRPLogo} />
       </Link>
       <RightSide>
         <SubMenu>
-          <ListItem>커뮤니티</ListItem>
+          <Link to={"/bulletinboard"}><ListItem>커뮤니티</ListItem></Link>
           <Link to={"/about"}>
             <ListItem>정보센터</ListItem>
           </Link>
