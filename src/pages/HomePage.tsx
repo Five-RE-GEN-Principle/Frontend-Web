@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 
 import fashionIcon from "@assets/fashionIcon.png";
@@ -6,30 +7,39 @@ import foodIcon from "@assets/foodIcon.png";
 import restaurantIcon from "@assets/restaurantIcon.png";
 import applicationIcon from "@assets/applicationIcon.png";
 import { Link } from "react-router-dom";
+import Carousel from "@components/Carousel";
+
 const HomePage = () => {
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+
+  const handleIndicatorHover = (index: number) => {
+    setCurrentIndex(index);
+  };
+
   return (
     <Container>
-      <Carousel>대충 아주 머찐 랭킹 이미지</Carousel>
+      <Carousel currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
       <ButtonContainer>
-      <Link to={"/ShoppingFashion"}>
-        <MenuButton>
-          <MenuIcon src={fashionIcon} />
-          <ButtonText>Fashion</ButtonText>
-        </MenuButton>
-      </Link>
-      <Link to={"/ShoppingBeauty"}>
-        <MenuButton>
-          <MenuIcon src={beautyIcon} />
-          <ButtonText>Beauty</ButtonText>
-        </MenuButton>
-      </Link>
-      <Link to={"/ShoppingFood"}>
-        <MenuButton>
-          <MenuIcon src={foodIcon} />
-          <ButtonText>Food</ButtonText>
-        </MenuButton>
-      </Link>
-        <MenuButton>
+        <Link to={"/ShoppingFashion"}>
+          <MenuButton onMouseOver={() => handleIndicatorHover(0)}>
+            <MenuIcon src={fashionIcon} />
+            <ButtonText>Fashion</ButtonText>
+          </MenuButton>
+        </Link>
+        <Link to={"/ShoppingBeauty"}>
+          <MenuButton onMouseOver={() => handleIndicatorHover(1)}>
+            <MenuIcon src={beautyIcon} />
+            <ButtonText>Beauty</ButtonText>
+          </MenuButton>
+        </Link>
+
+        <Link to={"/ShoppingFood"}>
+          <MenuButton onMouseOver={() => handleIndicatorHover(2)}>
+            <MenuIcon src={foodIcon} />
+            <ButtonText>Food</ButtonText>
+          </MenuButton>
+        </Link>
+        <MenuButton onMouseOver={() => handleIndicatorHover(3)}>
           <MenuIcon src={restaurantIcon} />
           <ButtonText>Restaurant</ButtonText>
         </MenuButton>
@@ -45,20 +55,6 @@ const HomePage = () => {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-`;
-
-const Carousel = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 40px;
-
-  width: 100vw;
-  height: 300px;
-  background-color: #d8f6ee;
-
-  margin-top: 30px;
-  margin-bottom: 20px;
 `;
 
 const ButtonContainer = styled.div`

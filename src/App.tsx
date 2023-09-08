@@ -16,6 +16,8 @@ import CertMarkPage from "@pages/CertMarkPage";
 import ShoppingBeauty from "@pages/ShoppingBeauty";
 import ShoppingFashion from "@pages/ShoppingFashion";
 import ShoppingFood from "@pages/ShoppingFood";
+import BulletinBoardPage from "@pages/BulletinBoardPage";
+
 
 const App = () => {
   return (
@@ -34,6 +36,7 @@ const App = () => {
         <Route path ="shoppingbeauty" element={<ShoppingBeauty/>}/>
         <Route path ="shoppingfashion" element={<ShoppingFashion/>}/>
         <Route path ="shoppingfood" element={<ShoppingFood/>}/>
+        <Route path="bulletinboardpage" element={<BulletinBoardPage />} />
       </Route>
     </Routes>
   );

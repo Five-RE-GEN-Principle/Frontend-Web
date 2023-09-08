@@ -127,6 +127,8 @@ const DropdownMenu = styled.div`
   padding: 20px 15px;
 
   box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.35);
+
+  z-index: 1;
 `;
 
 export default Header;

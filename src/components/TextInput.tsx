@@ -27,6 +27,10 @@ const TextInput = ({
 };
 
 const StyledInput = styled.input<{ width: string; height: string }>`
+  &::placeholder {
+    white-space: pre-wrap;
+  }
+
   width: ${(props) => props.width};
   height: ${(props) => props.height};
 
