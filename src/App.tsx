@@ -13,6 +13,9 @@ import FoodPage from "@pages/CalculatorPage/FoodPage";
 import RestaurantPage from "@pages/CalculatorPage/RestaurantPage";
 
 import CertMarkPage from "@pages/CertMarkPage";
+import ShoppingBeauty from "@pages/ShoppingBeauty";
+import ShoppingFashion from "@pages/ShoppingFashion";
+import ShoppingFood from "@pages/ShoppingFood";
 
 const App = () => {
   return (
@@ -28,6 +31,9 @@ const App = () => {
           <Route path="restaurant" element={<RestaurantPage />} />
         </Route>
         <Route path="certmark" element={<CertMarkPage />} />
+        <Route path ="shoppingbeauty" element={<ShoppingBeauty/>}/>
+        <Route path ="shoppingfashion" element={<ShoppingFashion/>}/>
+        <Route path ="shoppingfood" element={<ShoppingFood/>}/>
       </Route>
     </Routes>
   );

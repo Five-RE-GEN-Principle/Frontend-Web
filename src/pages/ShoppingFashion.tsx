@@ -5,7 +5,7 @@ import TextInput from "@components/TextInput";
 
 
 
-const ShoppingBeauty = () =>{
+const ShoppingFashion = () =>{
   return (
     <Container>
       <SubBody>
@@ -43,23 +43,32 @@ const ShoppingBeauty = () =>{
       </SubBody>
       <MainBody>
         <MainTitle_MainBody>
-          화장품
+          패션
         </MainTitle_MainBody>
         <SubCategory>
           <SubCategoryContent>
-            뷰티
+            상의
           </SubCategoryContent>
           <SubCategoryContent>
-            클렌징
+            바지
           </SubCategoryContent>
           <SubCategoryContent>
-            헤어케어
+            아우터
           </SubCategoryContent>
           <SubCategoryContent>
-            스킨케어
+            언더웨어
           </SubCategoryContent>
           <SubCategoryContent>
-            향수
+            신발
+          </SubCategoryContent>
+          <SubCategoryContent>
+            가방
+          </SubCategoryContent>
+          <SubCategoryContent>
+            지갑
+          </SubCategoryContent>
+          <SubCategoryContent>
+            악세서리
           </SubCategoryContent>
         </SubCategory>
         <SubCategoryLine>
@@ -131,6 +140,7 @@ flex-direction: row;
 width : 60vw;
 height : 60px;
 padding-top: 25px;
+flex-wrap: wrap;
 /* background-color: #000000; */
 
 `;
@@ -198,4 +208,4 @@ height : 26vh;
 gap:16px;
 background-color: #D9D9D9;
 `;
-export default ShoppingBeauty;
+export default ShoppingFashion;

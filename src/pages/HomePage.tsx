@@ -11,20 +11,24 @@ const HomePage = () => {
     <Container>
       <Carousel>대충 아주 머찐 랭킹 이미지</Carousel>
       <ButtonContainer>
+      <Link to={"/ShoppingFashion"}>
         <MenuButton>
           <MenuIcon src={fashionIcon} />
-          <Link to={"/ShoppingBeauty"}>
           <ButtonText>Fashion</ButtonText>
-          </Link>
         </MenuButton>
+      </Link>
+      <Link to={"/ShoppingBeauty"}>
         <MenuButton>
           <MenuIcon src={beautyIcon} />
           <ButtonText>Beauty</ButtonText>
         </MenuButton>
+      </Link>
+      <Link to={"/ShoppingFood"}>
         <MenuButton>
           <MenuIcon src={foodIcon} />
           <ButtonText>Food</ButtonText>
         </MenuButton>
+      </Link>
         <MenuButton>
           <MenuIcon src={restaurantIcon} />
           <ButtonText>Restaurant</ButtonText>
