@@ -14,6 +14,7 @@ import RestaurantPage from "@pages/CalculatorPage/RestaurantPage";
 
 import CertMarkPage from "@pages/CertMarkPage";
 import BulletinBoardPage from "@pages/BulletinBoardPage";
+import QnAPage from "@pages/QnAPage";
 
 
 const App = () => {
@@ -30,7 +31,8 @@ const App = () => {
           <Route path="restaurant" element={<RestaurantPage />} />
         </Route>
         <Route path="certmark" element={<CertMarkPage />} />
-        <Route path="bulletinboardpage" element={<BulletinBoardPage />} />
+        <Route path="bulletinboard" element={<BulletinBoardPage />} />
+        <Route path="qna" element={<QnAPage />} />
       </Route>
     </Routes>
   );
