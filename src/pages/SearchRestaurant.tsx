@@ -2,8 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import TextInput from "@components/TextInput";
-
-
+import MapPic from "@assets/map.png"
 
 const ShoppingFood = () =>{
 
@@ -51,9 +50,7 @@ const ShoppingFood = () =>{
         <MainInfo2>
           내 주변에 마커로 표시된 음식점을 확인하고 이용해보세요.
         </MainInfo2>
-        
-          <Map/>
-        
+        <Map src ={MapPic}/>
       </MainBody>
 
     </Container>
@@ -115,7 +112,7 @@ const MainInfo2= styled.li`
   color : #363636;
 `;
 
-const Map= styled.li`
+const Map= styled.img`
   display: flex;
   width : 63vw;
   height : 68vh;
