@@ -13,6 +13,8 @@ import FoodPage from "@pages/CalculatorPage/FoodPage";
 import RestaurantPage from "@pages/CalculatorPage/RestaurantPage";
 
 import CertMarkPage from "@pages/CertMarkPage";
+import BulletinBoardPage from "@pages/BulletinBoardPage";
+
 
 const App = () => {
   return (
@@ -28,6 +30,7 @@ const App = () => {
           <Route path="restaurant" element={<RestaurantPage />} />
         </Route>
         <Route path="certmark" element={<CertMarkPage />} />
+        <Route path="bulletinboardpage" element={<BulletinBoardPage />} />
       </Route>
     </Routes>
   );
