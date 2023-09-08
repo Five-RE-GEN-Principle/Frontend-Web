@@ -103,9 +103,11 @@ const BeautyPage = () => {
 단순 가계산이 아닌 실제 심사 요청시,
 첨부파일에 포장재 재활용 용이성 등급 평가를 통해 받은
 등급 인증 서류를 제출해주세요.
-
-관련 내용 : 환경부 포장재 재활용 용이성 등급평가`}
+`}
           </Paragraph>
+          <a href="https://kprc21482.cafe24.com/admin/bbs/down.php?code=eprdown&idx=71978&no=1">
+            <p>관련 내용 : 환경부 포장재 재활용 용이성 등급평가</p>
+          </a>
         </RecycleScoreContainer>
       </ContentsContainer>
       <div>
