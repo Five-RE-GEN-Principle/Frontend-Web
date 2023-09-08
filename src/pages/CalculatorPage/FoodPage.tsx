@@ -9,7 +9,6 @@ import HighRadiusButton from "@components/HighRadiusButton";
 import Modal from "@components/Modal";
 
 const FoodPage = () => {
-  const [selected, setSelected] = useState<string | null>(null); // 여기서 "yes" 또는 "no" 또는 null 값 저장
   const [rankSelected, setRankSelected] = useState<number | null>(null);
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -140,14 +139,6 @@ const InfoContainer = styled.div`
   display: flex;
   align-items: flex-start;
   gap: 7px;
-`;
-
-const UpcycleContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-
-  width: 80%;
 `;
 
 const CheckBoxesContainer = styled.div`
